@@ -1,0 +1,2 @@
+# djangobasic
+django basic learning
