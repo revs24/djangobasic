@@ -56,8 +56,9 @@ ROOT_URLCONF = 'new_migrations.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ '/Users/revti/DOOL/migrations/new_migrations/templates'
-            ],
+        'DIRS': [   '/Users/revti/DOOL/migrations/new_migrations/templates',
+                    '/Users/revti/DOOL/migrations/new_migrations/articles/templates'
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,8 +79,12 @@ WSGI_APPLICATION = 'new_migrations.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dool',
+        'USER': 'revs',
+        'PASSWORD': 'Cyclotron_24',
+        'HOST': 'dooldbinstance.c1vgzhdykvk9.us-west-2.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 

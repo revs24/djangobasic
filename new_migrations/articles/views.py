@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 from django.template import Context
 from django.shortcuts import render_to_response
-from articles.models import Article
+from articles.models import Tutorials
 
 # Create your views here.
 
@@ -23,7 +23,8 @@ def hello_easy_way(request):
 	return render_to_response('hello.html', {'name': name})
 
 def articles(request):
-	return render_to_response('articles.html', {'articles': Article.objects.all()})
+	return render_to_response('articles.html', {'articles': Tutorials.objects.filter(category='NodeJS')})
 
 def article(request, article_id = 1):
-	return render_to_response('article.html', {'article': Article.objects.get(id=article_id)})
+	category = 'NodeJS'
+	return render_to_response('article.html', {'article': Tutorials.objects.get(category=category)})
