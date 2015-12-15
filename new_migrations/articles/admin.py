@@ -1,5 +1,5 @@
 from django.contrib import admin
-from articles.models import Tutorials
+from articles.models import TopicDetails
 # Register your models here.
 
-admin.site.register(Tutorials)
+admin.site.register(TopicDetails)

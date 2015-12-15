@@ -81,9 +81,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dool',
-        'USER': 'revs',
-        'PASSWORD': 'Cyclotron_24',
-        'HOST': 'dooldbinstance.c1vgzhdykvk9.us-west-2.rds.amazonaws.com',
+        'USER': 'root',
+        'PASSWORD': 'cyclotron',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
